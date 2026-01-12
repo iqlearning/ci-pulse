@@ -1,0 +1,34 @@
+{
+    "name": "iqlearning/pulse",
+    "description": "Code Igniter 4 package for monitoring application health and performance. Porting from Laravel to Code Igniter 4 framework. Kudos to Laravel community for the original package.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Iqlearning\\Pulse\\": "src/"
+        },
+        "exclude-from-classmap": [
+            "**/Database/Migrations/**"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Iqlearning",
+            "email": "iqlearning@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "codeigniter4/framework": "^4.0"
+    },
+    "require-dev": {
+        "codeigniter4/devkit": "^1.3"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    }
+}
