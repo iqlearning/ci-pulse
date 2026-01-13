@@ -1,6 +1,6 @@
 <?php
 
-namespace Iqlearning\Pulse\Controller;
+namespace Iqlearning\Pulse\Controllers;
 
 use App\Controllers\BaseController;
 use Iqlearning\Pulse\Pulse;
@@ -150,3 +150,4 @@ class PulseController extends BaseController
         return $this->response->setJSON($stats);
     }
 }
+
