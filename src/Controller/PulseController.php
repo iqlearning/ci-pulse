@@ -16,7 +16,7 @@ class PulseController extends BaseController
      */
     public function index()
     {
-        return $this->view('\Iqlearning\Pulse\Views\dashboard');
+        return $this->view('\Iqlearning\Pulse\Views\pulse\dashboard');
     }
 
     /**
@@ -150,4 +150,5 @@ class PulseController extends BaseController
         return $this->response->setJSON($stats);
     }
 }
+
 
