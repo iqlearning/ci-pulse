@@ -1,9 +1,9 @@
 <?php
 
-namespace Iqlearning\Pulse\Controllers;
+namespace Iqlearning\Pulse\Controller;
 
 use App\Controllers\BaseController;
-use Iqlearning\Pulse\Pulse as IqlearningPulse;
+use Iqlearning\Pulse\Pulse;
 use Iqlearning\Pulse\Recorders\SystemStats;
 use Iqlearning\Pulse\Traits\Viewable;
 
@@ -36,7 +36,7 @@ class PulseController extends BaseController
         (new SystemStats())->start();
 
         // 3. Ingest to Storage
-        IqlearningPulse::instance()->ingest();
+        Pulse::instance()->ingest();
 
         return $this->response->setJSON(['status' => 'recorded', 'timestamp' => $timestamp]);
     }
@@ -150,4 +150,3 @@ class PulseController extends BaseController
         return $this->response->setJSON($stats);
     }
 }
-
