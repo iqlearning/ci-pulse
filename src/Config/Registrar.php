@@ -1,12 +1,13 @@
 <?php
 
-namespace CodeIgniter\Shield\Config;
+namespace Iqlearning\Pulse\Config;
 
 use CodeIgniter\Events\Events;
 use Iqlearning\Pulse\Pulse;
 
 class Registrar
 {
+    protected $routes;
     public static function Events(): array
     {
         return [
@@ -52,7 +53,4 @@ class Registrar
             'pulse' => Pulse::class,
         ]];
     }
-    // protected static function captureException(){
-
-    // }
 }
